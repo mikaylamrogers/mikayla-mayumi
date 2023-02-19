@@ -70,7 +70,7 @@ let jsonDatabase = [
     {
         "title" : "Self Portrait Stamp",
         "picture_url" : "gifs/stamp.gif",
-        "link" : "html/portrait-stamp/portrait-stamp.html",
+        "link" : "html/portrait-stamp.html",
         "category" : "Creative Code",
     },
     {
