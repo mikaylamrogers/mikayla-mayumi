@@ -1,15 +1,45 @@
-// background gradient source code: https://codepen.io/lsammarco/pen/waMpJw
-$(document).mousemove(function(event) {
-  windowWidth = $(window).width();
-  windowHeight = $(window).height();
-  
-  mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-  mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
-  
-  $('.radial-gradient').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #cce3d1, #48db68, #e8a0bd)');
+
+// footer code from https://codepen.io/whins/pen/mPBREq
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('footer').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
 });
 
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
 
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('footer').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('footer').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+
+// CONTENT GRID
 let contentGridElement = document.getElementById('contentGrid');
   
 let jsonDatabase = [
@@ -143,16 +173,18 @@ let newContentElement = document.createElement("DIV");
 
 // ADD TITLE //
 let newContentHeading = document.createElement("H3");
+newContentHeading.style.rotate = "24.82deg";
+newContentHeading.style.paddingBottom = "2%";
+newContentHeading.style.textAlign = "center";
+
 newContentHeading.innerHTML = "<a href='" + incomingJSON['link'] + "'>" + incomingJSON['title'] + "</a>";
 newContentElement.appendChild(newContentHeading);
-newContentHeading.style.cursor = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEdJREFUeAF90FEKgDAMwFDT+x9awYCRwjL282CM9joFsGie/swYy6oiENW8RaJ5PBvxvCpqxfwetTOqeyo+Rgx3JjnrCxNa3TwuAY6NyoMhAAAAAElFTkSuQmCC),auto";	
 
 // change color on mouseover
 newContentHeading.addEventListener("mouseover", function(){
     newContentHeading.style.color = "rgb(5, 38, 255)";
     newContentSubheading.style.transform = "scale(1.2)";
     newContentHeading.style.transition = "0.5s";
-    newContentHeading.style.cursor = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEdJREFUeAF90FEKgDAMwFDT+x9awYCRwjL282CM9joFsGie/swYy6oiENW8RaJ5PBvxvCpqxfwetTOqeyo+Rgx3JjnrCxNa3TwuAY6NyoMhAAAAAElFTkSuQmCC),auto";	
 })
 newContentHeading.addEventListener("mouseout", function(){
     newContentHeading.style.color = "black";
@@ -162,6 +194,10 @@ newContentHeading.addEventListener("mouseout", function(){
 // ADD IMAGES //
 let newImage = document.createElement("IMG");
 newImage.classList.add("profilePicture");
+newImage.style.rotate = "24.82deg";
+newImage.style.width = "100%";
+newImage.style.boxShadow = "10px 10px 5px #ccc";
+
 newImage.src = incomingJSON['picture_url'];
 newContentElement.appendChild(newImage);
 contentGridElement.appendChild(newContentElement);
@@ -176,6 +212,9 @@ newImage.addEventListener("mouseout", function(){
   
 // ADD CATEGORY //
 let newContentSubheading = document.createElement("H5");
+newContentSubheading.style.rotate = "24.82deg";
+newContentSubheading.style.textAlign = "left";
+
 newContentSubheading.innerHTML = incomingJSON['category'];
 newContentElement.appendChild(newContentSubheading);
 // change color on mouseover
