@@ -161,7 +161,13 @@ newImage.style.boxShadow = "10px 10px 5px #ccc";
 
 // newImage.innerHTML = "<a href='" + incomingJSON['link'] + "'>" + "<img src='" + incomingJSON['picture_url'] + "'>" + "</a>";
 newImage.src = incomingJSON['picture_url'];
-newContentElement.appendChild(newImage);
+
+let imageLink = document.createElement("a");
+imageLink.href = incomingJSON['link'];
+imageLink.appendChild(newImage);
+newContentElement.appendChild(imageLink);
+
+// newContentElement.appendChild(newImage);
 contentGridElement.appendChild(newContentElement);
 
 // rotate images on mouseover
