@@ -3,6 +3,12 @@ let contentGridElement = document.getElementById('contentGrid');
   
 let jsonDatabase = [
     {
+      "title" : "Megumi Organics",
+      "picture_url" : "gifs/megumi.gif",
+      "link" : "html/megumi-organics.html",
+      "category" : "Web Dev · Freelance",
+    },
+    {
       "title" : "You Are Invited to Breakup",
       "picture_url" : "gifs/breakup.png",
       "link" : "html/you-are-invited-to-breakup.html",
@@ -97,18 +103,18 @@ let jsonDatabase = [
       "link" : "html/maia.html",
       "category" : "UI/UX",
     },
-    // {
-    //   "title" : "WTF (What the Font)",
-    //   "picture_url" : "gifs/wtf.gif",
-    //   "link" : "html/wtf.html",
-    //   "category" : "UI/UX",
-    // },
-    // {
-    //   "title" : "IRIS",
-    //   "picture_url" : "gifs/iris.gif",
-    //   "link" : "html/iris.html",
-    //   "category" : "Service Design",
-    // },
+    {
+      "title" : "WTF (What the Font)",
+      "picture_url" : "gifs/wtf.gif",
+      "link" : "html/wtf.html",
+      "category" : "UI/UX",
+    },
+    {
+      "title" : "IRIS",
+      "picture_url" : "gifs/iris.gif",
+      "link" : "html/iris.html",
+      "category" : "UI/UX",
+    },
     {
       "title" : "Summer of '93",
       "picture_url" : "gifs/summer.gif",
@@ -231,7 +237,7 @@ function lahat() {
   creativecode.addEventListener("click", code);
 
   function code() {
-    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Motion Graphics' || incomingJSON['category'] === 'UI/UX') {
+    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Web Dev · Freelance' || incomingJSON['category'] === 'Motion Graphics' || incomingJSON['category'] === 'UI/UX') {
       newContentHeading.style.display = 'none';
       newImage.style.display = 'none';
       newContentSubheading.style.display = 'none';
@@ -249,7 +255,7 @@ function lahat() {
   motiongraphics.addEventListener("click", motion);
 
   function motion() {
-    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Creative Code' || incomingJSON['category'] === 'UI/UX') {
+    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Web Dev · Freelance' || incomingJSON['category'] === 'Creative Code' || incomingJSON['category'] === 'UI/UX') {
       newContentHeading.style.display = 'none';
       newImage.style.display = 'none';
       newContentSubheading.style.display = 'none';
@@ -265,7 +271,7 @@ function lahat() {
   ui.addEventListener("click", uiux);
 
   function uiux() {
-    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Creative Code' || incomingJSON['category'] === 'Motion Graphics') {
+    if (incomingJSON['category'] === 'Web Dev' || incomingJSON['category'] === 'Web Dev · Freelance' || incomingJSON['category'] === 'Creative Code' || incomingJSON['category'] === 'Motion Graphics') {
       newContentHeading.style.display = 'none';
       newImage.style.display = 'none';
       newContentSubheading.style.display = 'none';
