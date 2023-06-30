@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(#F9F6B0, #EEEDED, #EEEDED, #EEEDED, #EEEDED);
+  background-image: linear-gradient(#B0F9C4, #EEEDED, #EEEDED, #EEEDED, #EEEDED);
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 2vw 3vw 0vw 3vw;
@@ -9,12 +9,7 @@ body {
   font-style: normal;
   overflow-x: hidden;
 }
-
-img {
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
+  
 #nav {
   font-size: 2.6vw;
   display: flex;
@@ -26,14 +21,14 @@ img {
   left: 0;
   width: 100%;
 }
-  
+
 .circles {
   display: flex;
   padding-top: 0;
   font-size: 1.5vw;
   top: 0;
 }
-  
+
 #about, #services, #contact {
   rotate: -20deg;
   border: 1px black solid;
@@ -47,66 +42,30 @@ img {
   color: white;
 }
 
-#slider {
-  background: url('me.png');  
-}
-
 a {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 a:hover {
   color: white;
   transform: scaleX(1.2,);
-  transition: 1s;
+  transition: 0.5s;
 }
-
-p {
-  font-size: 1.3vw;
-  line-height: 170%;
-}
-
-#profile {
-  width: 80%;
-  display: block; /* Ensure the image behaves as a block element */
-  margin: 0 auto; 
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 3fr 3fr;
-}
-
-.item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h5 {
-  font-size: 95%;
+  
+h1 {
   font-weight: normal;
-  border: 1px dashed black;
-  border-radius: 10px;
-  padding: 1%;
-  width: 40%;
-  text-transform: uppercase;
-  text-align: center;
+  font-size: 3.5vw;
 }
 
-h5:hover {
-    background-color: black;
-    color: white;
+h2 {
+  font-weight: normal;
+  font-size: 2.5vw;
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.contact {
   width: 80%;
+  margin: auto;
 }
 
 #footer {
@@ -134,29 +93,13 @@ and (max-device-width: 480px) {
   #about, #services, #contact {
     padding: 5px;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
+  h1 {
+    font-size: 4vw;
   }
 
-  p {
+  h2 {
     font-size: 3vw;
   }
 }
-
-@media only screen and (max-width: 1000px) {
-  p {
-    font-size: 2vw;
-  }
-}
-
-@media only screen 
-and (max-device-width: 480px) {
-  p {
-    font-size: 3vw;
-  }
-}
+  
