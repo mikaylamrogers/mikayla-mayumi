@@ -1,103 +1,101 @@
 body {
-  background-image: linear-gradient(#B0E7F9, #EEEDED, #EEEDED, #B0E7F9);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 2vw 3vw 0vw 3vw;
-  color: black;
-  font-family: elza, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  overflow-x: hidden;
+    background-color: rgb(238, 237, 237);
+    margin: 2vw 3vw 0vw 3vw;
+    color: black;
+    font-family: elza, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    /* cursor: url(http://www.rw-designer.com/cursor-extern.php?id=132467),auto;	 */
   }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
-  transform: scaleX(1.2,);
-  transition: 0.5s;
-}
-
-#nav {
-  font-size: 2.6vw;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 3%;
-  z-index: 5000;
-  top: 0;
-  margin: 0;
-  left: 0;
-  width: 100%;
-}
-
-.circles {
-  display: flex;
-  padding-top: 0;
-  font-size: 1.5vw;
-  top: 0;
-}
-
-#about, #services, #contact {
-  rotate: -20deg;
-  border: 1px black solid;
-  border-radius: 200px;
-  padding: 10px;
-  text-align: center;
-}
-
-#about:hover, #services:hover, #contact:hover {
-  background-color: black;
-  color: white;
-}
-
-#index-bio {
-  padding-top: 1%;
-  font-size: 1.8vw;
-}
+  a {
+    text-decoration: none;
+    color: black;
+  }
   
-h1 {
-  font-size: 1vh;
-  text-align: center;
-}
+  a:hover {
+    color: white;
+    transform: scaleX(1.2,);
+    transition: 0.5s;
+  }
+  
+  #nav {
+    font-size: 2.6vw;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3%;
+    z-index: 5000;
+    top: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .circles {
+    display: flex;
+    padding-top: 0;
+    font-size: 1.5vw;
+    top: 0;
+  }
+  
+  #about, #services, #contact {
+    rotate: -20deg;
+    border: 1px black solid;
+    border-radius: 200px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #about:hover, #services:hover, #contact:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  #index-bio {
+    padding-top: 1%;
+    font-size: 1.5vw;
+  }
+  
+  h1 {
+    font-size: 1vh;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 110%;
+    text-align: left;
+    margin-top: 0;
+    font-weight: normal;
+  }
+  
+  h5 {
+    font-size: 75%;
+    font-weight: normal;
+    /* border: 1px dashed black; */
+    /* border-radius: 10px; */
+    /* padding: 1%; */
+    /* width: 40%; */
+    text-transform: uppercase;
+  }
+  
+  body * {
+    box-sizing: border-box;
+  }
+  
+  #contentGrid {
+    grid-gap: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-h3 {
-  font-size: 105%;
-  text-align: left;
-  margin-top: 0;
-  font-weight: normal;
-}
-
-h5 {
-  font-size: 95%;
-  font-weight: normal;
-  border: 1px dashed black;
-  border-radius: 10px;
-  padding: 1%;
-  width: 40%;
-  text-transform: uppercase;
-}
-
-body * {
-  box-sizing: border-box;
-}
-
-#contentGrid {
-  grid-gap: 50px;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.wrapper {
-  padding-top: 6%;
-}
+  .wrapper {
+    padding-top: 6%;
+  }
 
 footer {
-  display: none;
-  /* text-align: center;
+  text-align: center;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -108,7 +106,7 @@ footer {
   width: 100%;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 0.5%; */
+  padding-bottom: 0.5%;
 }
 
 footer a {
@@ -121,16 +119,6 @@ footer a {
 footer a:hover {
   color: black;
   background-color: rgb(238, 237, 237);
-}
-
-#footer {
-  text-align: center;
-  padding: 5%;
-}
-
-img {
-  border: 1px solid black;
-  border-radius: 10px;
 }
 
 @media only screen 
@@ -155,22 +143,29 @@ and (max-device-width: 480px) {
   }
 
   #index-bio {
-    padding-top: 5%;
-    font-size: 3vw;
+    padding: 5%;
+    font-size: 4vw;
   }
 
   h3 {
-    font-size: 80%;
+    font-size: 100%;
   }
   
   h5 {
-    font-size: 60%;
+    font-size: 70%;
     font-weight: normal;
-    border: 1px dashed black;
-    border-radius: 10px;
     padding: 1%;
     width: 40%;
     text-transform: uppercase;
+  }
+  footer {
+    width: 100%;
+    padding-bottom: 0.5%;
+  }
+  footer a {
+    border-radius: 454px 45px 45px 45px;
+    padding: 4%;
+    font-size: 4vw;
   }
 }
 
