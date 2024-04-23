@@ -1,0 +1,161 @@
+@font-face {
+  font-family: abc;
+  src: url('ABC Diatype.ttf');
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: abc;
+  cursor: -webkit-image-set(
+    url('https://d2kq0urxkarztv.cloudfront.net/5d484c62008daf0085aaf62e/image-0e3f3856-f62b-4f59-a5a1-b6fa55b03c7f.png?w=12') 1x,
+    url('https://d2kq0urxkarztv.cloudfront.net/5d484c62008daf0085aaf62e/image-0e3f3856-f62b-4f59-a5a1-b6fa55b03c7f.png') 2x
+  ), auto;
+}
+
+a:hover {
+  cursor: -webkit-image-set(
+    url('https://d2kq0urxkarztv.cloudfront.net/5d484c62008daf0085aaf62e/image-0e3f3856-f62b-4f59-a5a1-b6fa55b03c7f.png?w=12') 1x,
+    url('https://d2kq0urxkarztv.cloudfront.net/5d484c62008daf0085aaf62e/image-0e3f3856-f62b-4f59-a5a1-b6fa55b03c7f.png') 2x
+  ), auto;
+}
+
+.pageContent {
+  margin: 6rem 8rem;
+}
+
+@media screen and (max-width: 749px) {
+  .pageContent {
+    margin: 5rem 2rem;
+  }
+}
+
+.nav {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 749px) {
+  .nav {
+    background: #f5f5f5;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 99;
+    height: 3rem;
+  }
+}
+
+.nav div a {
+  padding: 0 1rem;
+}
+
+.nav .title {
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 749px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer a,
+  footer p {
+    text-align: center;
+  }
+}
+
+footer p {
+  margin: 0;
+}
+
+.ee-wrapper {
+  display: flex;
+  gap: 8rem;
+}
+
+.ee-wrapper .experience {
+  width: 40rem;
+}
+
+@media screen and (max-width: 749px) {
+  .ee-wrapper {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .ee-wrapper .experience {
+    width: unset;
+  }
+}
+
+.ee-wrapper .experience-date {
+  color: #000000;
+  opacity: 0.5;
+}
+
+.ee-title {
+  font-size: 1.5rem;
+  position: relative;
+  max-width: fit-content;
+}
+
+.ee-title::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  background: #f7b15e;
+  opacity: 0.5;
+  height: 0.5rem;
+  bottom: 0.2rem;
+  z-index: -1;
+}
+
+.aboutIntro {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.aboutIntro .about-text {
+  position: absolute;
+  max-width: 40rem;
+  left: 0;
+}
+
+.aboutIntro #moi {
+  width: 30rem;
+}
+
+.aboutIntro .credit {
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: right;
+  opacity: 0.5;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 749px) {
+  .contact-nav {
+    display: none;
+  }
+}
