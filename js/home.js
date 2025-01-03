@@ -3,6 +3,13 @@ let contentGridHomeElement = document.querySelector('.contentGridHome');
   
 let featuredDatabase = [
   {
+    "title" : "Jason Schmidt",
+    "picture_url" : "gifs/jasonschmidt.gif",
+    "link" : "html/jasonschmidt.html",
+    "category" : "( Client Work )",
+    "description": "A dynamic digital portfolio showcasing Jason Schmidt, an independent music artist and actor featured in the Tony Award-winning musical, The Outsiders.",
+  },
+  {
     "title" : "光 / Licht / Light",
     "picture_url" : "gifs/light.gif",
     "link" : "html/light.html",

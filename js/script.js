@@ -3,6 +3,34 @@ let contentGridElement = document.getElementById('contentGrid');
   
 let jsonDatabase = [
   {
+    "title" : "Jason Schmidt",
+    "picture_url" : "gifs/jasonschmidt.gif",
+    "link" : "html/jasonschmidt.html",
+    "category" : "( Client Work )",
+    "description": "A dynamic digital portfolio showcasing Jason Schmidt, an independent music artist and actor featured in the Tony Award-winning musical, The Outsiders.",
+  },
+  {
+    "title" : "Sofia Yulo Fine Jewelry",
+    "picture_url" : "gifs/syfj.gif",
+    "link" : "html/syfj.html",
+    "category" : "( Client Work )",
+    "description": "A Manila-based fine jewelry designer known for creating timeless pieces that celebrate legacy and craftsmanship.",
+  },
+  {
+    "title" : "SUMMIT",
+    "picture_url" : "gifs/summit.gif",
+    "link" : "html/summit.html",
+    "category" : "( Client Work )",
+    "description": "A platform united by a shared commitment to cultural representation and lifelong learning.",
+  },
+  {
+    "title" : "MAYUMI",
+    "picture_url" : "gifs/mayumi.gif",
+    "link" : "html/mayumi.html",
+    "category" : "( Client Work )",
+    "description": "An e-commerce site for my jewelry brand MAYUMI—bringing forth the beauty of natural gemstones, driven by the new generation.",
+  },
+  {
     "title" : "光 / Licht / Light",
     "picture_url" : "gifs/light.gif",
     "link" : "html/light.html",
